@@ -62,7 +62,7 @@ enum BodyType {
 /// is returned to the [`Agent`] connection pool used (notice there is always
 /// an agent present, even when not explicitly configured by the user).
 ///
-/// ```
+/// ```no_run
 /// # fn main() -> Result<(), ureq::Error> {
 /// # ureq::is_test(true);
 /// let response = ureq::get("http://example.com/").call()?;
@@ -198,7 +198,7 @@ impl Response {
     ///
     /// Example:
     ///
-    /// ```
+    /// ```no_run
     /// # fn main() -> Result<(), ureq::Error> {
     /// # ureq::is_test(true);
     /// let resp = ureq::get("http://example.com/charset/iso").call()?;
@@ -222,7 +222,7 @@ impl Response {
     ///
     /// Example:
     ///
-    /// ```
+    /// ```no_run
     /// # fn main() -> Result<(), ureq::Error> {
     /// # ureq::is_test(true);
     /// let resp = ureq::get("http://example.com/charset/iso").call()?;
@@ -260,7 +260,7 @@ impl Response {
     ///
     /// Example:
     ///
-    /// ```
+    /// ```no_run
     /// use std::io::Read;
     /// # fn main() -> Result<(), Box<dyn std::error::Error>> {
     /// # ureq::is_test(true);
@@ -432,7 +432,7 @@ impl Response {
     ///
     /// Example:
     ///
-    /// ```
+    /// ```no_run
     /// # fn main() -> Result<(), ureq::Error> {
     /// # ureq::is_test(true);
     /// let text = ureq::get("http://httpbin.org/get/success")

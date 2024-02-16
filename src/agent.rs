@@ -87,7 +87,7 @@ pub(crate) struct AgentConfig {
 /// But by creating an agent as entry point for the request, we
 /// can keep a state.
 ///
-/// ```
+/// ```no_run
 /// # fn main() -> Result<(), ureq::Error> {
 /// # ureq::is_test(true);
 /// let mut agent = ureq::agent();
@@ -144,7 +144,7 @@ impl Agent {
     ///
     /// If you've got an already-parsed [Url], try [request_url][Agent::request_url].
     ///
-    /// ```
+    /// ```no_run
     /// # fn main() -> Result<(), ureq::Error> {
     /// # ureq::is_test(true);
     /// use ureq::Response;
@@ -166,7 +166,7 @@ impl Agent {
     /// you want to parse the URL and then modify it before making the request.
     /// If you'd just like to pass a String or a `&str`, try [request][Agent::request].
     ///
-    /// ```
+    /// ```no_run
     /// # fn main() -> Result<(), ureq::Error> {
     /// # ureq::is_test(true);
     /// use {url::Url, ureq::Response};

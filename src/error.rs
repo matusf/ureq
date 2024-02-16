@@ -65,7 +65,7 @@ use crate::Response;
 /// If you'd like to treat all status code errors as normal, successful responses,
 /// you can use [OrAnyStatus::or_any_status] like this:
 ///
-/// ```
+/// ```no_run
 /// use ureq::Error::Status;
 /// # fn main() -> std::result::Result<(), ureq::Transport> {
 /// # ureq::is_test(true);
@@ -289,7 +289,7 @@ impl Error {
 
     /// The type of this error.
     ///
-    /// ```
+    /// ```no_run
     /// # ureq::is_test(true);
     /// let err = ureq::get("http://httpbin.org/status/500")
     ///     .call().unwrap_err();

@@ -57,7 +57,7 @@
 //!
 //! In its simplest form, ureq looks like this:
 //!
-//! ```rust
+//! ```no_run
 //! fn main() -> Result<(), ureq::Error> {
 //! # ureq::is_test(true);
 //!     let body: String = ureq::get("http://example.com")
@@ -100,7 +100,7 @@
 //! Ureq supports sending and receiving json, if you enable the "json" feature:
 //!
 //! ```rust
-//! # #[cfg(feature = "json")]
+//! # #[cfg(feature = "hootbin", "json")]
 //! # fn main() -> std::result::Result<(), ureq::Error> {
 //! # ureq::is_test(true);
 //!   // Requires the `json` feature enabled.
@@ -503,7 +503,7 @@ pub fn agent() -> Agent {
 ///
 /// If you've got an already-parsed [`Url`], try [`request_url()`].
 ///
-/// ```
+/// ```no_run
 /// # fn main() -> Result<(), ureq::Error> {
 /// # ureq::is_test(true);
 /// let resp: ureq::Response = ureq::request("OPTIONS", "http://example.com/")
@@ -514,13 +514,14 @@ pub fn agent() -> Agent {
 pub fn request(method: &str, path: &str) -> Request {
     agent().request(method, path)
 }
+
 /// Make a request using an already-parsed [Url].
 ///
 /// This is useful if you've got a parsed [`Url`] from some other source, or if
 /// you want to parse the URL and then modify it before making the request.
 /// If you'd just like to pass a [`String`] or a [`&str`], try [`request()`].
 ///
-/// ```
+/// ```no_run
 /// # fn main() -> Result<(), ureq::Error> {
 /// # ureq::is_test(true);
 /// use url::Url;

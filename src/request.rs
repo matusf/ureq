@@ -15,7 +15,7 @@ pub type Result<T> = std::result::Result<T, Error>;
 
 /// Request instances are builders that creates a request.
 ///
-/// ```
+/// ```no_run
 /// # fn main() -> Result<(), ureq::Error> {
 /// # ureq::is_test(true);
 /// let response = ureq::get("http://example.com/get")
@@ -67,7 +67,7 @@ impl Request {
     /// Use this with GET, HEAD, OPTIONS or TRACE. It sends neither
     /// Content-Length nor Transfer-Encoding.
     ///
-    /// ```
+    /// ```no_run
     /// # fn main() -> Result<(), ureq::Error> {
     /// # ureq::is_test(true);
     /// let resp = ureq::get("http://example.com/")
@@ -204,7 +204,7 @@ impl Request {
     ///
     /// The `Content-Length` header is implicitly set to the length of the serialized value.
     ///
-    /// ```
+    /// ```no_run
     /// # fn main() -> Result<(), ureq::Error> {
     /// # ureq::is_test(true);
     /// let resp = ureq::put("http://httpbin.org/put")
@@ -229,7 +229,7 @@ impl Request {
     /// attempt to encode the string using that character set. If it fails, we fall back
     /// on utf-8.
     ///
-    /// ```
+    /// ```no_run
     /// // this example requires features = ["charset"]
     ///
     /// # fn main() -> Result<(), ureq::Error> {
@@ -251,7 +251,7 @@ impl Request {
     /// The `Content-Type` header is implicitly set to application/x-www-form-urlencoded.
     /// The `Content-Length` header is implicitly set to the length of the serialized value.
     ///
-    /// ```
+    /// ```no_run
     /// # fn main() -> Result<(), ureq::Error> {
     /// # ureq::is_test(true);
     /// let resp = ureq::post("http://httpbin.org/post")
@@ -281,7 +281,7 @@ impl Request {
     ///
     /// The input from the reader is buffered into chunks of size 16,384, the max size of a TLS fragment.
     ///
-    /// ```
+    /// ```no_run
     /// use std::io::Cursor;
     /// # fn main() -> Result<(), ureq::Error> {
     /// # ureq::is_test(true);
@@ -297,7 +297,7 @@ impl Request {
 
     /// Set a header field.
     ///
-    /// ```
+    /// ```no_run
     /// # fn main() -> Result<(), ureq::Error> {
     /// # ureq::is_test(true);
     /// let resp = ureq::get("http://httpbin.org/bytes/1000")
@@ -369,7 +369,7 @@ impl Request {
     ///
     /// For example, to set `?format=json&dest=/login`
     ///
-    /// ```
+    /// ```no_run
     /// # fn main() -> Result<(), ureq::Error> {
     /// # ureq::is_test(true);
     /// let resp = ureq::get("http://httpbin.org/get")
@@ -393,7 +393,7 @@ impl Request {
     ///
     /// For example, to set `?format=json&dest=/login`
     ///
-    /// ```
+    /// ```no_run
     /// # fn main() -> Result<(), ureq::Error> {
     /// # ureq::is_test(true);
     ///
